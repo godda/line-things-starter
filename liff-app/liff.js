@@ -66,7 +66,7 @@ function uiToggleStateButton(pressed) {
 }
 
 function uiTemp(val) {
-    const el = document.getElementById("click-count");
+    const el = document.getElementById("temp-val");
 
    
       
