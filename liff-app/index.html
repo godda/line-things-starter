@@ -10,7 +10,7 @@
 
   <body>
     <!-- Title -->
-    <h2>LINE Things Starter</h2>
+    <h2>LINE Things Temperature</h2>
     <hr />
     <p>
       <img id="loading-animation" class="" src="loading.gif" height="14px" />
@@ -42,11 +42,20 @@
           <th class="device-info-cell device-info-key">Click count</th>
           <td class="device-info-cell device-info-val" id="click-count">0</td>
         </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">TEMP</th>
+          <td class="device-info-cell device-info-val" id="temp-val">0</td>
+        </tr>
+         <tr>
+          <th class="device-info-cell device-info-key">HUMID</th>
+          <td class="device-info-cell device-info-val" id="humid-val">0</td>
+        </tr>
+
       </table>
       <hr />
       <!-- Toggle LED -->
       <p>
-        <button id="btn-led-toggle" class="btn btn-led-toggle" onclick="handlerToggleLed()">Switch LED ON</button>
+        <button id="btn-led-toggle" class="btn btn-led-toggle" onClick="handlerToggleLed()">Switch LED ON</button>
       </p>
       <hr />
     </div>

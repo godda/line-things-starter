@@ -50,7 +50,7 @@ function uiCountPressButton() {
     clickCount++;
 
     const el = document.getElementById("click-count");
-    el.innerText = clickCount;
+    //el.innerText = clickCount;
 }
 
 function uiToggleStateButton(pressed) {
@@ -64,6 +64,19 @@ function uiToggleStateButton(pressed) {
         el.innerText = "Released";
     }
 }
+
+function uiTemp(val) {
+    const el = document.getElementById("temp-val"); 
+       el.innerText = val;
+    
+}
+function uiHumid(val) {
+    const el = document.getElementById("humid-val");
+       el.innerText = val;
+    
+}
+
+
 
 function uiToggleDeviceConnected(connected) {
     const elStatus = document.getElementById("status");
@@ -246,6 +259,7 @@ function liffGetButtonStateCharacteristic(characteristic) {
     characteristic.startNotifications().then(() => {
         characteristic.addEventListener('characteristicvaluechanged', e => {
             const val = (new Uint8Array(e.target.value.buffer))[0];
+			uiTemp(val);
             if (val > 0) {
                 // press
                 uiToggleStateButton(true);
